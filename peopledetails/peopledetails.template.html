@@ -1,0 +1,36 @@
+<div ng-if="details === undefined">
+  <p>please select a user from the panel to view user details</p>
+  </div>
+<div class="row center-details" ng-if="details !== undefined">
+  <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <img src="{{details.img}}" alt="{{details.name}}" />
+  </div>
+  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+    <br />
+    <div>
+    <br />
+    <span ng-repeat="rating in [1,2,3,4,5] | limitTo:details.rating" class="glyphicon glyphicon-heart icon-2x"></span>
+    <span ng-repeat="rating in [1,2,3,4,5] | limitTo:5-details.rating" class="glyphicon glyphicon-heart-empty icon-2x"></span>
+    </div>  
+    <br />
+  </div>
+  <div class="col-lg-12 col-md-12 col-sm-12  col-xs-12">
+    <blockquote>{{details.Description}}</blockquote>
+  </div>   
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item disabled">
+       Likes
+        </li>
+      <li ng-repeat="like in details.Likes" class="list-group-item">{{like}}</li>
+    </ul>
+  </div> 
+  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item disabled">
+       Dislikes
+        </li>
+      <li ng-repeat="disLike in details.Dislikes" class="list-group-item">{{disLike}}</li>
+    </ul>
+  </div> 
+</div>

@@ -1,0 +1,33 @@
+.sidebar{
+  img{
+    width:40px;
+    height:40px;
+  }
+  .pointer{
+    cursor:pointer;
+  }
+}
+
+.center-details{
+  img{
+    width:100px;
+    height:100px;
+  }
+  blockqoute{
+    border-left: 4px #ddd;
+    margin: 16px 0;
+  }
+  .icon-2x{
+    font-size:20px;
+    margin-right: 5px;
+  }
+}
+
+.navbar{
+  .icon-3x{
+    font-size: 30px;
+  }
+  .right{
+    float:right;
+  }
+}
